@@ -111,3 +111,17 @@ best_student_2.courses_in_progress += ['Python', 'Git']
 best_student_2.grades = {'Python': [10, 10, 10, 10, 10], 'Git': [10, 9]}
 best_student_2.finished_courses += ['Введение в программирование']
 print(best_student_2)
+
+def average_rating_st(best_student_1, best_student_2):
+  average_rating_st = []
+  for student in [best_student_1, best_student_2]:
+    average_rating_st.append(student._st_average_rating())
+  return round(sum(average_rating_st) / len(average_rating_st), 1)
+print(f'Средняя оценка студентов: {average_rating_st(best_student_1, best_student_2)}')
+
+def average_rating_lc(cool_lecturer_1, cool_lecturer_2):
+  average_rating_lc = []
+  for lecturer in [cool_lecturer_1, cool_lecturer_2]:
+    average_rating_lc.append(lecturer._average_rating())
+  return round(sum(average_rating_lc) / len(average_rating_lc), 1)
+print(f'Средняя оценка лекторов: {average_rating_lc(cool_lecturer_1, cool_lecturer_2)}')
